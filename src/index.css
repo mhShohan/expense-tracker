@@ -1,13 +1,176 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Glory', sans-serif;
+}
+body {
+  background: #68868c;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.ballanceContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Ballance {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Ballance h2 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+.Ballance h3 {
+  font-size: 3.6rem;
+}
+.form-container {
+  flex: 1;
+}
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+}
+.from-group {
+  margin-bottom: 5px;
+}
+.form-control {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 4px solid #000;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #000;
+  background: #d8e3e7;
+}
+.submit {
+  cursor: pointer;
+  font-weight: 600;
+  transition: all ease 250ms;
+}
+.submit:hover {
+  background: #226064;
+  color: #000;
+  border-bottom: 4px solid #35858b;
+}
+.error {
+  text-align: center;
+  font-weight: 700;
+}
+
+.transactions {
+  display: flex;
+}
+.income {
+  flex: 1;
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 10px;
+}
+.income h1,
+.expense h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+.expense {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+.SingleTransaction {
+  display: flex;
+  border: 1px solid #000;
+  margin-top: 5px;
+  padding: 4px 10px;
+}
+
+.SingleTransaction .info {
+  flex: 3;
+}
+.SingleTransaction .info p {
+  font-size: 12px;
+}
+.SingleTransaction .money {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SingleTransaction .action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SingleTransaction .action button {
+  padding: 0 12px;
+  font-weight: 700;
+  font-size: 22px;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: all ease 300ms;
+  cursor: pointer;
+  color: #000;
+}
+.SingleTransaction .action button:hover {
+  background: #226064;
+  color: #000;
+  border-color: #226064;
+}
+
+@media (max-width: 900px) {
+  .ballanceContainer {
+    flex-direction: column;
+  }
+  .transactions {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .heading {
+    font-size: 2.6rem;
+  }
+  .Ballance h2 {
+    font-size: 2rem;
+  }
+  .Ballance h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .income {
+    margin: 0px;
+  }
+  .income h1,
+  .expense h1 {
+    font-size: 1.4rem;
+  }
+  .expense {
+    margin: 0px;
+  }
 }
